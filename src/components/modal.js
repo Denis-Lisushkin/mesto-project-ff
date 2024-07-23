@@ -1,6 +1,5 @@
 function openPopup(popupType) {
   popupType.classList.add("popup_is-opened");
-  popupType.classList.add("popup_is-animated");
   document.addEventListener("keyup", escBottonHandler);
 }
 
