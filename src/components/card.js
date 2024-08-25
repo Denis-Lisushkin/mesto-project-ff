@@ -23,8 +23,13 @@ const createCard = (cardData, deleteCard, handleLikes, viewCard, userId) => {
     deleteButton.remove();
   } else {
     deleteButton.addEventListener("click", () => {
-      deleteCard(cardData._id);
-      card.remove();
+      deleteCard(cardData._id)
+       .then((res) => {
+          card.remove();
+      })
+      .catch((err) => {
+        console.log(err)
+      });
     });
   }
   return card;
